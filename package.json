@@ -1,0 +1,26 @@
+{
+  "name": "hn-love",
+  "version": "0.1.1",
+  "description": "hn-love helps you remember to upvote that awesome hn article you were reading in that place you weren't allowed to vote from, when you get to somewhere you're allowed to vote.",
+  "main": "index.js",
+  "dependencies": {
+    "shellscript": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "hn-love": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshwyatt/hn-love.git"
+  },
+  "author": "josh wyatt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshwyatt/hn-love/issues"
+  },
+  "homepage": "https://github.com/joshwyatt/hn-love"
+}

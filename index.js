@@ -1,4 +1,8 @@
-require('shellscript').globalize();
+#!/usr/bin/env node
+'use strict';
+
+var shellscript = require('shellscript');
+shellscript.globalize();
 
 //hard-coded HR ips. We will add ips to this as we cast our votes from them
 var offLimitIps = ['173.247.199.46', '199.87.82.66', '50.250.208.114'];
@@ -10,13 +14,12 @@ var checkIfICanVote = function(){
 
   //a call to this website will give us a text version of our public facing ip.
   //it has a trailing white space we have to get rid of
-  var publicIp = $('curl icanhazip.com -s').slice(0, -1);
+  var publicIp = $('curl "icanhazip.com" -s').slice(0, -1);
 
   //if we do not have wifi
   if( publicIp.length === 0 ){
     return;
   }
-
 
   var canVote = true;
   for(var i = 0; i < offLimitIps.length; i++){
