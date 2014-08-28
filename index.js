@@ -33,4 +33,6 @@ var checkIfICanVote = function(){
 
 };
 
-setInterval(checkIfICanVote, 1000);
+module.exports = function(){
+  setInterval(checkIfICanVote, 1000);
+}();
