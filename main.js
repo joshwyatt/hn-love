@@ -1,20 +1,25 @@
 require('shellscript').globalize();
 
-// var hrPublicFacingIp = '173.247.199.46';
-var hrPublicFacingIp = '199.87.82.66';
-var publicIp = $('curl icanhazip.com -s');
-var commandLineArguments = process.argv;
-var hackerNewsLink = commandLineArguments[2];
+var publicIp = $('curl icanhazip.com -s').slice(0, -1);
+console.log(publicIp);
+var offLimitIps = ['173.247.199.46', '199.87.82.66'];
 
-publicIp = publicIp.split('');
-publicIp.pop();
-publicIp = publicIp.join('');
-
-if( publicIp === hrPublicFacingIp ){
-  console.log('you are at hack reactor');
-}else{
-  console.log('you are not at hack reactor');
+var canVote = true;
+for(var i = 0; i < offLimitIps.length; i++){
+  var offLimitIp = offLimitIps[i];
+  if( offLimitIp === publicIp ){
+    canVote = false;
+    break;
+  }
 }
+
+if( !canVote ){
+  console.log('You cannot vote');
+}else{
+  console.log('You can vote');
+}
+
+
 
 
 
