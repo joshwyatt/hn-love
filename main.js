@@ -1,6 +1,6 @@
 require('shellscript').globalize();
 
-var offLimitIps = ['173.247.199.46', '199.87.82.66'];
+var offLimitIps = ['173.247.199.46', '199.87.82.66', '50.250.208.114'];
 
 
 var checkIfICanVote = function(){
@@ -28,4 +28,4 @@ var checkIfICanVote = function(){
 
 };
 
-setInterval(checkIfICanVote, 10000);
+setInterval(checkIfICanVote, 2000);
