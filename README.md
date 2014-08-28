@@ -18,4 +18,4 @@ If you pass in the optional argument, which should be a url of the comments page
 
 When hn-love opens HN for you, it will add your current location to the list of places you are not allowed to vote from. As long as you keep hn-love running, it will reopen HN or the url you passed in, every time you connect to a location you haven't voted from already. Vote to your heart's content!
 
-Try using connecting your computer to your mobile hotspot to test it out.
+Try connecting your computer to your mobile hotspot to test it out.
