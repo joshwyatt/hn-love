@@ -1,6 +1,6 @@
 require('shellscript').globalize();
 
-var offLimitIps = ['173.247.199.46']//, '199.87.82.66'];
+var offLimitIps = ['173.247.199.46', '199.87.82.66'];
 
 
 var checkIfICanVote = function(){
