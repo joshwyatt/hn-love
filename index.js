@@ -11,7 +11,6 @@ var offLimitIps = ['173.247.199.46', '199.87.82.66', '50.250.208.114'];
 
 var checkIfICanVote = function(){
   
-  console.log(process.argv[2]);
   var hackerNewsLink = process.argv[2] || 'https://news.ycombinator.com/';
 
   //a call to this website will give us a text version of our public facing ip.
