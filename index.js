@@ -11,7 +11,17 @@ var offLimitIps = ['173.247.199.46', '199.87.82.66', '50.250.208.114'];
 
 var checkIfICanVote = function(){
   
-  var hackerNewsLink = process.argv[2] || 'https://news.ycombinator.com/';
+  var searchQuery = process.argv[2];
+  if( !searchQuery ){
+    console.log('Please pass in an article name to follow');
+    console.log('Example:');
+    console.log('hn-love "An Awesome Article"');
+    return;
+  }
+
+
+  searchQuery = process.argv[2].split(' ').join('+');
+  var hackerNewsGoogleLink = 'https://google.com/search?q=hacker+news+' + searchQuery;
 
   //a call to this website will give us a text version of our public facing ip.
   //it has a trailing white space we have to get rid of
@@ -31,14 +41,15 @@ var checkIfICanVote = function(){
     }
   }
 
-  if( canVote ){
+  if( true ){
     offLimitIps.push(publicIp);
-    shell('open ' + hackerNewsLink);
+    shell('open ' + hackerNewsGoogleLink);
   }
 
 };
 
 module.exports = function(){
-  console.log('hn-love is now running and will open HN for you when you are able to vote.....');
-  setInterval(checkIfICanVote, 7000);
+  // console.log('hn-love is now running and will open HN for you when you are able to vote.....');
+  // setInterval(checkIfICanVote, 1000);
+  checkIfICanVote();
 }();
