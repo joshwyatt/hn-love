@@ -41,15 +41,13 @@ var checkIfICanVote = function(){
     }
   }
 
-  if( true ){
-    offLimitIps.push(publicIp);
+  if( canVote ){
     shell('open ' + hackerNewsGoogleLink);
   }
 
 };
 
 module.exports = function(){
-  // console.log('hn-love is now running and will open HN for you when you are able to vote.....');
-  // setInterval(checkIfICanVote, 1000);
-  checkIfICanVote();
+  console.log('hn-love is now running and will open HN for you when you are able to vote.....');
+  setInterval(checkIfICanVote, 7000);
 }();
