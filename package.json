@@ -1,6 +1,6 @@
 {
   "name": "hn-love",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "hn-love helps you remember to upvote that awesome hn article you were reading in that place you weren't allowed to vote from, when you get to somewhere you're allowed to vote.",
   "main": "index.js",
   "dependencies": {
